@@ -1,11 +1,11 @@
 .app{
     background-color: #f1f3f6;
-    height: 100vh;
+    height: 100%;
 }
 
 .main-header{
-    width: 100vw;
-    height: 10%;
+
+    height: 100px;
     background-color: #ffffff;
     display: flex;
     justify-content: space-between;

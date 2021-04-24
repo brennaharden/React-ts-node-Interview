@@ -1,0 +1,42 @@
+{   
+    "10991": {
+        "courseName": "English 101",
+        "section": 1,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "10992": {
+        "courseName": "English 101",
+        "section": 2,
+        "studentRegistry": [1000006, 1000007, 1000008, 1000009, 1000010]
+    },
+    "20443": {
+        "courseName": "Shakespeare the Politician",
+        "section": 3,
+        "studentRegistry": [1000011, 1000012, 1000013, 1000014, 1000015]
+    },
+    "20444": {
+        "courseName": "Shakespeare the Politician",
+        "section": 4,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "45523": {
+        "courseName": "Junior Seminar",
+        "section": 3,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "45529": {
+        "courseName": "Junior Seminar",
+        "section": 9,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "45555": {
+        "courseName": "Junior Capstone",
+        "section": 5,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "45506": {
+        "courseName": "Diversified Representation in Comic Books",
+        "section": 6,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    }
+}

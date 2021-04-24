@@ -4,7 +4,7 @@ import conexedLogo from "../Conexed-logo.png";
 const Header = () => (
     <header className="main-header">
         <section className="logo-holder">
-            <img className="conexed-logo" src={conexedLogo} />
+            <img className="conexed-logo" src={conexedLogo} alt="ConexEd"/>
         </section>
         <p className="header-intro">React Typescript Test</p>
     </header>

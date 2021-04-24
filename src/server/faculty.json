@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nameFirst": "John",
+        "nameLast": "Breckenmeyer",
+        "department": "English",
+        "courseIds": [10992, 20443, 45523, 45555],
+        "active": true
+    },
+    {
+        "id": 2,
+        "nameFirst": "Carol",
+        "nameLast": "Hudspeth",
+        "department": "English",
+        "courseIds": [10991, 20444, 45529, 45506],
+        "active": true
+    },
+    {
+        "id": 3,
+        "nameFirst": "Danilo",
+        "nameLast": "Ruiz",
+        "department": "English",
+        "courseIds": [10992, 20443, 45523, 45555],
+        "active": true
+    },
+    {
+        "id": 4,
+        "nameFirst": "Charlize",
+        "nameLast": "Sampson",
+        "department": "English",
+        "courseIds": [10992, 20443, 45523, 45555],
+        "active": true
+    },
+    {
+        "id": 5,
+        "nameFirst": "Claire",
+        "nameLast": "Grimes",
+        "department": "English",
+        "courseIds": [10992, 20443, 45523, 45555],
+        "active": true
+    },
+    {
+        "id": 6,
+        "nameFirst": "Tove",
+        "nameLast": "Jansson",
+        "department": "English",
+        "courseIds": [10992, 20443, 45523, 45555],
+        "active": true
+    }
+]
