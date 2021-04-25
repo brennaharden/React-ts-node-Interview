@@ -2,7 +2,20 @@
 import { ActionArray } from "../reduxTypes"
 import { UPDATE_FACULTY } from "../actions"
 
-const initialState = {
+interface Faculty {
+    faculty: FacultyObj[]
+}
+
+interface FacultyObj {
+    id: number;
+    nameFirst: string;
+    nameLast: string;
+    department: string;
+    courseIds: number[];
+    active: boolean;
+}
+
+const initialState: Faculty = {
     faculty: []
 }
 

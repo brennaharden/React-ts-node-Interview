@@ -1,0 +1,87 @@
+.app{
+    background-color: #f1f3f6;
+    height: 100%;
+}
+
+.main-header{
+
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.logo-holder{
+    height: 60%;
+    /* width: 200px; */
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+}
+
+.header-intro{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.conexed-logo{
+    height: 90%;
+    width: auto;
+}
+
+.main-area{
+    display: flex;
+    justify-content: space-around;
+    height: 90%;
+}
+
+.card {
+    height: 275px;
+    width: 300px;
+    border: 1px solid grey;
+    border-top: 2px solid rgb(143, 211, 40);
+    background-color: white;
+    margin: 15px;
+    padding: 10px;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(62, 62, 62, 0.571);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.large {
+    height: 600px;
+    width: 800px;
+}
+
+.change-container {
+    display: flex;
+    width: 300px;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.dropdown {
+    height: 25px;
+    margin-top: 20px;
+}
+
+.dates-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.none {
+    display: none
+}

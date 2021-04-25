@@ -13,7 +13,7 @@
         "nameLast": "Hudspeth",
         "department": "English",
         "courseIds": [10991, 20444, 45529, 45506],
-        "active": true
+        "active": false
     },
     {
         "id": 3,

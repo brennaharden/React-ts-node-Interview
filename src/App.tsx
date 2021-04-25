@@ -1,8 +1,8 @@
 import React, {FC, useEffect, useState} from "react";
 import {useDispatch} from 'react-redux'
 import { updateFaculty } from './redux/actions'
-import "./App.css";
 import axios from 'axios'
+import "./styling/App.css";
 
 import Header from "./components/Header";
 import LeftArea from "./components/LeftArea";
