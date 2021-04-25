@@ -13,6 +13,8 @@ interface FacultyObj {
     department: string;
     courseIds: number[];
     active: boolean;
+    startDate?: string;
+    endDate?: string;
 }
 
 const initialState: Faculty = {

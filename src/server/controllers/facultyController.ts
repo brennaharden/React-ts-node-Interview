@@ -10,6 +10,8 @@ interface FacultyObj {
     department: string;
     courseIds: number[];
     active: boolean;
+    startDate?: string;
+    endDate?: string;
 }
 
 export const facultyController = {
@@ -37,8 +39,9 @@ export const facultyController = {
         const {id, active, startDate, endDate} = req.body
         const index = faculty.findIndex((elem: FacultyObj) => elem.id === +id)
         faculty[index]['active'] = active
-        // faculty[index]['startDate'] = startDate
-        // faculty[index]['endDate'] = endDate
+        faculty[index]['startDate'] = startDate
+        faculty[index]['endDate'] = endDate
+        faculty[index]['courseIds'] = []
         res.status(200).send(faculty)
     },
     removeFromFaculty: (req: Request, res: Response) => {

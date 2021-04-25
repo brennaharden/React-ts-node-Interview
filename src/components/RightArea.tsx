@@ -8,12 +8,13 @@ interface FacultyObj {
     department: string;
     courseIds: number[];
     active: boolean;
+    startDate?: string;
+    endDate?: string;
 }
 
 const RightArea = () => {
 
     const { faculty }: {faculty: any[]} = useAppSelector((state) => state.faculty)
-    console.log(faculty)
 
     const sabbaticalGroup = faculty.filter((elem: FacultyObj) => {
         return elem.active === false
@@ -24,14 +25,8 @@ const RightArea = () => {
             <div key={elem.id} className="card">
                 <h2>{elem.nameFirst} {elem.nameLast}</h2>
                 <h3>{elem.department} Department</h3>
-                {/* <h3>Courses:</h3>
-                <ul>
-                    {elem.courseIds.map((course: number) => {
-                        return (
-                            <li>{courses[course].courseName}</li>
-                        )
-                    })}
-                </ul> */}
+                <h3>{elem.startDate}</h3>
+                <h3>{elem.endDate}</h3>
             </div>
         )
     })
