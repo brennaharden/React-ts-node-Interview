@@ -1,7 +1,7 @@
 import {ActionObject} from "../reduxTypes"
 import { UPDATE_COURSES } from "../actions"
 
-const initialState = {
+const initialState= {
     courses: {}
 }
 
@@ -10,6 +10,7 @@ export default function reducer(state = initialState, action: ActionObject) {
     switch(type){
         case UPDATE_COURSES:
             return {...state, courses: payload}
-        default: return state
+        default: 
+            return state
     }
 }

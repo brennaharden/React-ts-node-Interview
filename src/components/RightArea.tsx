@@ -12,7 +12,7 @@ const RightArea = () => {
 
     const facultyMap = sabbaticalGroup.map((elem: FacultyObj) => {
         return (
-            <div key={elem.id} className="card">
+            <div key={elem.id} className="card inactive">
                 <h2>{elem.nameFirst} {elem.nameLast}</h2>
                 <h3>{elem.department} Department</h3>
                 <h3>{elem.startDate}</h3>

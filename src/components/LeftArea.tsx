@@ -1,9 +1,10 @@
-import axios from "axios";
 import React, { FC, useState, useEffect} from "react";
+import axios from "axios";
 import {useDispatch} from 'react-redux'
 import {updateCourses, updateFaculty} from '../redux/actions'
-import Modal from './Modal'
 import { FacultyObj, Faculty, Courses } from '../dataTypes'
+import Modal from './Modal'
+import Focal from './Focal'
 import NewFaculty from './NewFaculty'
 
 const LeftArea: FC<Faculty> = (props) => {
@@ -20,9 +21,7 @@ const LeftArea: FC<Faculty> = (props) => {
     const [display, setDisplay] = useState(false)
     const [display2, setDisplay2] = useState(false)
     const [{id, nameFirst, nameLast, department, courseIds, active}, setModalFocal] = useState<FacultyObj>(emptyFaculty)
-    const [newStatus, setNewStatus] = useState('')
-    const [startDate, setStartDate] = useState('')
-    const [endDate, setEndDate] = useState('')
+
     const dispatch = useDispatch()    
 
 useEffect((): void => {
@@ -45,7 +44,7 @@ const closeModal = (e: React.MouseEvent) => {
     setModalFocal(emptyFaculty)
 }
 
-const saveChanges = (e: React.MouseEvent) => {
+const saveChanges = (e: React.MouseEvent, newStatus: string, startDate: string, endDate: string) => {
 
     const body = {
         id,
@@ -53,13 +52,14 @@ const saveChanges = (e: React.MouseEvent) => {
         startDate,
         endDate
     }
-    console.log(id, newStatus)
+
     axios.put('/api/faculty/status', body)
         .then(res => {
             dispatch(updateFaculty(res.data))
 
         })
         .catch(err => console.log(err))
+        
     closeModal(e)
 }
 
@@ -93,33 +93,12 @@ const facultyMap = filteredFaculty.map((elem: FacultyObj) => {
     )
 })
 
-const focal = (
-    <div>
-        <h1>{nameFirst} {nameLast}</h1>
-        <h2>{department} Department</h2>
-        <div className="change-container">
-            <select value={newStatus} className="dropdown" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setNewStatus(e.target.value)}>
-                <option value="true">ACTIVE</option>
-                <option value="false">SABBATICAL</option>
-            </select>
-            <div className="dates-container">
-                <label htmlFor="start">Leave Date</label>
-                <input id="start" type="date" value={startDate} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setStartDate(e.target.value)}></input>
-                <label htmlFor="end">Returning Date</label>
-                <input id="end" type="date" value={endDate} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEndDate(e.target.value)}></input>
-            </div>
-        </div>
-        <button onClick={saveChanges}>Save Changes</button>
-        <button onClick={() => removeFaculty(id)}>Remove from Faculty</button>
-    </div>
-)
-
 return <div>
     <h1>Active Faculty</h1>
     <button onClick={() => setDisplay2(true)}>Create New Faculty Member</button>
     {facultyMap}
     <Modal display={display} close={closeModal}>
-        {focal}
+        <Focal modalFocal={{id, nameFirst, nameLast, department, courseIds, active}} removeFaculty={removeFaculty} saveChanges={saveChanges}/>
     </Modal>
     <Modal display={display2} close={closeModal}>
         <NewFaculty close={closeModal}/>

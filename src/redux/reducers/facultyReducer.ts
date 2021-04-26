@@ -13,6 +13,7 @@ export default function reducer(state = initialState, action: ActionArray) {
     switch (type) {
         case UPDATE_FACULTY:
             return { ...state, faculty: payload}
-        default : return state
+        default: 
+            return state
     }
 }
