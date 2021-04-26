@@ -1,16 +1,6 @@
 import React from "react";
 import { useAppSelector } from '../redux/hooks'
-
-interface FacultyObj {
-    id: number;
-    nameFirst: string;
-    nameLast: string;
-    department: string;
-    courseIds: number[];
-    active: boolean;
-    startDate?: string;
-    endDate?: string;
-}
+import { FacultyObj } from '../dataTypes'
 
 const RightArea = () => {
 

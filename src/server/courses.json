@@ -38,5 +38,40 @@
         "courseName": "Diversified Representation in Comic Books",
         "section": 6,
         "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43902": {
+        "courseName": "Godel's Incompleteness Theorem",
+        "section": 1,
+        "studentRegistry": [1000026, 1000037, 1000050, 1000039, 1000029]
+    },
+    "43924": {
+        "courseName": "Discrete Math",
+        "section": 1,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43804": {
+        "courseName": "Basic Algebra",
+        "section": 12,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43805": {
+        "courseName": "Basic Algebra",
+        "section": 13,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43702": {
+        "courseName": "Advanced Calculus Topics",
+        "section": 2,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43703": {
+        "courseName": "Advanced Calculus Topics",
+        "section": 3,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
+    },
+    "43723": {
+        "courseName": "Everyday Geometry",
+        "section": 9,
+        "studentRegistry": [1000001, 1000002, 1000003, 1000004, 1000005]
     }
 }

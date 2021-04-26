@@ -13,14 +13,14 @@
         "nameLast": "Hudspeth",
         "department": "English",
         "courseIds": [10991, 20444, 45529, 45506],
-        "active": false
+        "active": true
     },
     {
         "id": 3,
         "nameFirst": "Danilo",
         "nameLast": "Ruiz",
-        "department": "English",
-        "courseIds": [10992, 20443, 45523, 45555],
+        "department": "Math",
+        "courseIds": [43703, 43902, 43924],
         "active": true
     },
     {
@@ -28,15 +28,15 @@
         "nameFirst": "Charlize",
         "nameLast": "Sampson",
         "department": "English",
-        "courseIds": [10992, 20443, 45523, 45555],
+        "courseIds": [20443, 45523, 45555],
         "active": true
     },
     {
         "id": 5,
         "nameFirst": "Claire",
         "nameLast": "Grimes",
-        "department": "English",
-        "courseIds": [10992, 20443, 45523, 45555],
+        "department": "Math",
+        "courseIds": [43805, 43723, 43702],
         "active": true
     },
     {

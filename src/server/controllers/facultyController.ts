@@ -1,6 +1,7 @@
 const faculty = require('../faculty.json')
 const courses = require('../courses.json')
 import {Request, Response} from 'express'
+// import { FacultyObj } from '../../dataTypes'
 let id = 7
 
 interface FacultyObj {
@@ -22,13 +23,13 @@ export const facultyController = {
         res.status(200).send(courses)
     },
     addToFaculty: (req: Request, res: Response) => {
-        const {nameFirst, nameLast, department} = req.body
+        const {nameFirst, nameLast, department, courseIds} = req.body
         const newFaculty = {
             id,
             nameFirst,
             nameLast,
             department,
-            courseIds: [],
+            courseIds,
             active: true
         }
         faculty.push(newFaculty)

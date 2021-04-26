@@ -3,29 +3,8 @@ import React, { FC, useState, useEffect} from "react";
 import {useDispatch} from 'react-redux'
 import {updateCourses, updateFaculty} from '../redux/actions'
 import Modal from './Modal'
-
-interface Faculty {
-    faculty: FacultyObj[]
-}
-
-interface FacultyObj {
-    id: number;
-    nameFirst: string;
-    nameLast: string;
-    department: string;
-    courseIds: number[];
-    active: boolean;
-    startDate?: string;
-    endDate?: string;
-}
-
-interface Courses {
-    [key: string]: {
-        courseName: string;
-        section: number;
-        studentRegistry: number[];
-    }
-}
+import { FacultyObj, Faculty, Courses } from '../dataTypes'
+import NewFaculty from './NewFaculty'
 
 const LeftArea: FC<Faculty> = (props) => {
 
@@ -39,6 +18,7 @@ const LeftArea: FC<Faculty> = (props) => {
     }
     const [courses, setCourses] = useState<Courses>({})
     const [display, setDisplay] = useState(false)
+    const [display2, setDisplay2] = useState(false)
     const [{id, nameFirst, nameLast, department, courseIds, active}, setModalFocal] = useState<FacultyObj>(emptyFaculty)
     const [newStatus, setNewStatus] = useState('')
     const [startDate, setStartDate] = useState('')
@@ -61,6 +41,7 @@ const openModal = (elem: FacultyObj) => {
 const closeModal = (e: React.MouseEvent) => {
     e.stopPropagation()
     setDisplay(false)
+    setDisplay2(false)
     setModalFocal(emptyFaculty)
 }
 
@@ -80,6 +61,14 @@ const saveChanges = (e: React.MouseEvent) => {
         })
         .catch(err => console.log(err))
     closeModal(e)
+}
+
+const removeFaculty = (id: number) => {
+    axios.delete(`/api/faculty/remove/${id}`)
+    .then(res => {
+        dispatch(updateFaculty(res.data))
+    })
+    .catch(err => console.log(err))
 }
 
 const filteredFaculty = props.faculty.filter((elem: FacultyObj) => {
@@ -121,14 +110,19 @@ const focal = (
             </div>
         </div>
         <button onClick={saveChanges}>Save Changes</button>
+        <button onClick={() => removeFaculty(id)}>Remove from Faculty</button>
     </div>
 )
 
 return <div>
     <h1>Active Faculty</h1>
+    <button onClick={() => setDisplay2(true)}>Create New Faculty Member</button>
     {facultyMap}
     <Modal display={display} close={closeModal}>
         {focal}
+    </Modal>
+    <Modal display={display2} close={closeModal}>
+        <NewFaculty close={closeModal}/>
     </Modal>
     </div>
 };

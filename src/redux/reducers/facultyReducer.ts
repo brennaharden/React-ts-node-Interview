@@ -1,21 +1,7 @@
 
 import { ActionArray } from "../reduxTypes"
 import { UPDATE_FACULTY } from "../actions"
-
-interface Faculty {
-    faculty: FacultyObj[]
-}
-
-interface FacultyObj {
-    id: number;
-    nameFirst: string;
-    nameLast: string;
-    department: string;
-    courseIds: number[];
-    active: boolean;
-    startDate?: string;
-    endDate?: string;
-}
+import { Faculty } from "../../dataTypes"
 
 const initialState: Faculty = {
     faculty: []
