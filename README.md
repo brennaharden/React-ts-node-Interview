@@ -1,3 +1,9 @@
+## Hello, it's Brenna! 
+### See my process for this project:
+https://trello.com/b/R5Bx0eaN/conexed-interview
+
+--------------------
+
 ## fork and clone this repo before working on it
 
 ### run `npm i` -->
