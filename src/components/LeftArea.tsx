@@ -35,7 +35,6 @@ useEffect((): void => {
 }, [dispatch])
 
 const openModal = (elem: FacultyObj) => {
-    console.log(elem)
     setDisplay(true)
     setModalFocal(elem)
     // document.body.setAttribute('style', `position: fixed; top: -${windowOffset}px; left: 0; right: 0;`)

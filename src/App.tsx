@@ -19,7 +19,7 @@ const App: FC = () => {
             dispatch(updateFaculty(res.data))
         })
     }, [dispatch])
-    console.log(faculty)
+   
     return (
         <div className="app">
             <Header />
