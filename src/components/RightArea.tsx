@@ -15,13 +15,15 @@ const RightArea = () => {
             <div key={elem.id} className="card inactive">
                 <h2>{elem.nameFirst} {elem.nameLast}</h2>
                 <h3>{elem.department} Department</h3>
-                <h3>{elem.startDate}</h3>
-                <h3>{elem.endDate}</h3>
+                <h3>Leave Date</h3>
+                <p>{elem.startDate}</p>
+                <h3>Return Date</h3>
+                <p>{elem.endDate}</p>
             </div>
         )
     })
 return <div>
-    <h1>On Sabbatical</h1>
+    <h1 className="title">On Sabbatical</h1>
     {facultyMap}
 </div>;
 

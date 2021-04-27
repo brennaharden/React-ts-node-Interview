@@ -6,6 +6,7 @@ import { FacultyObj, Faculty, Courses } from '../dataTypes'
 import Modal from './Modal'
 import Focal from './Focal'
 import NewFaculty from './NewFaculty'
+import rightArrow from '../media/icons8-right-arrow-50.png'
 
 const LeftArea: FC<Faculty> = (props) => {
 
@@ -20,6 +21,7 @@ const LeftArea: FC<Faculty> = (props) => {
     const [courses, setCourses] = useState<Courses>({})
     const [display, setDisplay] = useState(false)
     const [display2, setDisplay2] = useState(false)
+    // const [windowOffset, setWindowOffset] = useState(0)
     const [{id, nameFirst, nameLast, department, courseIds, active}, setModalFocal] = useState<FacultyObj>(emptyFaculty)
 
     const dispatch = useDispatch()    
@@ -36,6 +38,7 @@ const openModal = (elem: FacultyObj) => {
     console.log(elem)
     setDisplay(true)
     setModalFocal(elem)
+    // document.body.setAttribute('style', `position: fixed; top: -${windowOffset}px; left: 0; right: 0;`)
 }
 const closeModal = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -59,7 +62,7 @@ const saveChanges = (e: React.MouseEvent, newStatus: string, startDate: string, 
 
         })
         .catch(err => console.log(err))
-        
+
     closeModal(e)
 }
 
@@ -94,8 +97,11 @@ const facultyMap = filteredFaculty.map((elem: FacultyObj) => {
 })
 
 return <div>
-    <h1>Active Faculty</h1>
-    <button onClick={() => setDisplay2(true)}>Create New Faculty Member</button>
+    <h1 className="title">Active Faculty</h1>
+    <div className="arrow-row">
+    <img src={rightArrow} alt="right arrow"></img>
+    <button id="new-faculty" onClick={() => setDisplay2(true)}>Add New Faculty Member</button>
+    </div>
     {facultyMap}
     <Modal display={display} close={closeModal}>
         <Focal modalFocal={{id, nameFirst, nameLast, department, courseIds, active}} removeFaculty={removeFaculty} saveChanges={saveChanges}/>

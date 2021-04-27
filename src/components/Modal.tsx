@@ -14,7 +14,7 @@ const Modal: FC<PropsType> = (props) => {
     return (
        <div className={`${display ? 'modal' : 'none'}`} onClick={(e) => close(e)}>
             <div className="large card" onClick={doNotClose}>
-                <button className="close" onClick={(e) => close(e)}>x</button>
+                <button className="close" onClick={(e) => close(e)}> x </button>
                 {props.children}
             </div>
         </div>

@@ -3,6 +3,34 @@
     height: 100%;
 }
 
+button {
+    height: 30px;
+    width: fit-content;
+    background: #ffffff;
+    color: #1b81b5;
+    font-weight: 400;
+    border: 1px solid #f1f3f6;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgb(167, 166, 166);
+}
+
+#new-faculty {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+p {
+    margin-left: 20px;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
 .main-header{
 
     height: 100px;
@@ -37,14 +65,24 @@
     height: 90%;
 }
 
+.arrow-row {
+    display: flex;
+    height: 30px;
+}
+
+.title {
+    font-size: 32px;
+    margin-block-end: 10px;
+}
+
 .card {
     height: 275px;
-    width: 300px;
-    border: 1px solid grey;
-    border-top: 2px solid rgb(143, 211, 40);
+    width: 350px;
+    border-top: 2.5px solid rgb(143, 211, 40);
     background-color: white;
     margin: 15px;
     padding: 10px;
+    box-shadow: 3px 3px 8px rgb(167, 166, 166);
 }
 
 .inactive {
@@ -66,23 +104,79 @@
 .large {
     height: 600px;
     width: 800px;
+    padding: 25px;
+}
+
+.focal {
+    margin: 40px;
+    /* display: flex; */
 }
 
 .change-container {
     display: flex;
+    flex-direction: column;
     width: 300px;
-    height: 100px;
+    height: 175px;
     justify-content: space-between;
 }
 
 .dropdown {
     height: 25px;
-    margin-top: 20px;
+    width: 115px;
+    margin-top: 15px;
 }
 
 .dates-container {
+    height: 150px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.label2 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.button-container {
+    height: 100px;
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#remove-button {
+    width: 150px;
+}
+
+.subtitle {
+    font-weight: 200;
+    margin-bottom: 35px;
+}
+
+.input-container {
+    display: flex;
+}
+
+.input-stack {
+    height: 50px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.select-stack {
+    height: 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+#courses {
+    height: 22px;
 }
 
 .none {

@@ -41,13 +41,30 @@ const NewFaculty: FC<PropsType> = (props) => {
 
     return (
     <div>
-        <h3>Complete the following form to create a new faculty member:</h3>
-        <input value={nameFirst} placeholder="First Name" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameFirst(e.target.value)}></input>
-        <input value={nameLast} placeholder="Last Name" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameLast(e.target.value)}></input>
-        <input value={department} placeholder="Department" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDepartment(e.target.value)}></input>
-        <select onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCourseIds([...courseIds, +e.target.value])}>
-            {courseMap}
-        </select>
+        <h1>Create New</h1>
+        <h3 className="subtitle">Complete the following form to add a new faculty member.</h3>
+        <div className="input-container">
+            <div className="input-stack">
+                <label htmlFor="first-name">First Name</label>
+                <input id="first-name" value={nameFirst} placeholder="e.g. Jane" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameFirst(e.target.value)}></input>
+            </div>
+            <div className="input-stack">
+                <label htmlFor="last-name">Last Name</label>
+                <input id="last-name" value={nameLast} placeholder="e.g. Fairfax" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNameLast(e.target.value)}></input>
+            </div>
+        </div>
+        <div className="input-container">
+            <div className="input-stack">
+                <label htmlFor="department">Department</label>
+                <input id="department" value={department} placeholder="e.g. Physics" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setDepartment(e.target.value)}></input>
+            </div>
+            <div className="select-stack">
+                <label htmlFor="courses">Select course by section:</label>
+                <select id="courses" onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCourseIds([...courseIds, +e.target.value])}>
+                    {courseMap}
+                </select>
+            </div>
+        </div>
         <button onClick={createNewFaculty}>Submit</button>
     </div>
     )
