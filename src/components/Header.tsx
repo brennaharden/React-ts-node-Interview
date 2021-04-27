@@ -6,7 +6,9 @@ const Header = () => (
         <section className="logo-holder">
             <img className="conexed-logo" src={conexedLogo} alt="ConexEd"/>
         </section>
-        <p className="header-intro">React Typescript Test</p>
+        <div className="intro-box">
+            <p className="header-intro">React Typescript Test</p>
+        </div>
     </header>
 );
 
